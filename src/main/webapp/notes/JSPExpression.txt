@@ -1,0 +1,29 @@
+JSP Scripting Elements 
+
+JSP Expression:		<%=  Some Java Expression %>
+- Compute an expression.
+- Result is included in HTML returned to browser
+
+Examples:
+	<p> Converting a String to uppercase: <%= new String("Upper").toUpperCase() %> </p>
+	<p> 25 multiplied by 4 equals: <%= 25*4 %> </p>
+	<p> Is 75 less then 69? <%= 75 < 69 %> </p>
+
+
+JSP Scriptlet: 		<% Some Java Code: 1 to many lines %>
+<%
+			for (int i = 0; i < 50; i++) {
+				if (i % 2 == 0) {
+					out.println("<br>" + i + ": Pair"); 
+				} else {
+					out.println("<br>" + i + ": Odd");
+				}
+			}
+		
+%>
+
+
+
+JSP Declaration: 	<%! Variable or method declaration !%> 
+- Declare a method in the JSP page
+- Call the method in the same JSP page
