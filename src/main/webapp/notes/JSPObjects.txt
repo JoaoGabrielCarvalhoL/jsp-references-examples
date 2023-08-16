@@ -1,0 +1,7 @@
+List of commonly used JSP Objects: 
+
+request: 		Contains HTTP Request headers and form data.
+response: 		Provides HTTP support for sending response. 
+out: 			JspWriter for including content in HTML page. 
+session: 		Unique session for each user of the web application.
+application:	Shared data for all users of the web application.
