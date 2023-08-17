@@ -1,0 +1,39 @@
+JSP Session Object 
+
+JSP session is created once for user's browser session. Unique for this user.
+
+- Commonly used when you need to keep trace of the user's actions.
+
+Example: 
+
+Each User 				Tomcat(Memory) -> Only in server memory.
+(Session ID: x) ->		Session 
+
+
+Add data to session object 
+Method signature
+session.setAttribute(String name, Object value);		
+Example: 
+List<String> itens = new ArrayList<String>();
+session.setAttribute("anyNameToMyList", itens);
+
+Retrieve data from session object. 
+Method signature
+Obejct session.getAttribute(String name);
+Example: 
+List<String> itens = (List<String) session.getAttribute("anyNameToMyList"); -> Same named used before.
+
+
+Other useful methods:
+
+isNew(): boolean 
+- Returns true if the sessions is new.
+
+getId(): String
+- Returns the session id.
+
+invalidate(): void 
+- Invalidates this session and unbinds any object associeted with it.
+
+setMaxInactiveInterval(long mills): void 
+- Sets the idle time for a session to expire. The value is supplied in milliseconds.

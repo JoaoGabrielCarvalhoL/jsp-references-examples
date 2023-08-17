@@ -1,0 +1,58 @@
+What is the purpose of Cookies? 
+
+- Personalize a web site for a user.
+- Keep track of user preferences.	
+- Text data exchanged between web browser and server.
+
+Example: 
+						Cookie
+Web Browser -----------------------------------> Server 
+			<-----------------------------------
+						Cookie
+						
+Cookies Content: 
+- Name / Value Pair 
+
+Cookie 
+name: anyApp.favoriteLanguage
+value: C++
+
+How Are Cookies Passed?
+- Browser will only send cookies that match the servers domain name.
+
+Web Browser (https://www.cnn.com) 				Server 
+The browser would only send cookies that were set by https://www.cnn.com, so they won't switch up and send everything across like a any domain. 
+Only matches on the actual domain name and the given path of the application.
+
+
+Cookie API - 
+
+Package: jakarta.servlet.http
+
+Constructor:
+Cookie(String name, String value)
+
+Example: 
+
+String name = request.getParameter("name");
+Cookie cookie = new Cookie("app.name.user", name);
+cookie.setMaxAge(60*60*24*365);
+response.addCookie(cookie);
+
+Obs: There are a max on 20 cookies per domain per path.
+
+Reading Cookies from the Browser. 
+
+Cookie[] cookies = request.getCookies();
+
+if (cookies != null) {
+	for (Cookie cookie : cookies) {
+		cookie.getName();
+		cookie.getValue();
+	}
+}
+
+
+
+
+
