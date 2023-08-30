@@ -1,0 +1,60 @@
+JSP Tags 
+
+JSP Custom Tags			JSP Standard Tag Library (JSTL)
+
+- Move heavy business logic into supporting class. 
+- Insert JSP custom tag to use supporting class.
+
+Befits of JSP Custom Tags: 
+- Minimize the amount of scriptlet code in a JSP.
+- Avoids dumping thousands of lines of code in JSP.
+- JSP page is simple. Main focus is only the presentation.
+- Tag is reusable.
+
+
+JSP Standard Tag Library (JSTL)
+- Core: Handling Variables, Looping, Conditionals. 
+- Message Formatting I18N: Message tags for handling internationalization and formatting.
+- Functions: String manipulation, getting the sizes of collection.
+- XML: Parsing and setting XML data.
+- SQL: Accessing database
+
+
+Core: 
+catch: Catches any throwable to occurs in the body.
+choose: Conditional tag that can be used for exclusive operations, similar to switch statement.
+if: Simple if/then conditional
+import: Retrieves a URL and exposes its contents on the page or a variable.
+forEach: Iterates over a collection of values. 
+forTokens: Iterates over a collection of tokens.
+out: Used in scriplets to display output, similar to <%= %>
+otherwise: Used with the <choose> tag to handle the else clause. 
+param: Adds a parameter to a URL. 
+redirect: Redirects the browser to a new URL.
+remove: Removes a scoped variable. 
+set: Assigns an expression value to variable.
+url: Defines a URL with query parameters.
+when: Used with the <choose> tag, when a condition is true.	 
+
+
+Obs: 
+Check the server version as there are differences in implementations.
+Example:
+tomcat < 10
+javax.servlet.jsp.jstl
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core"%>
+
+Tomcat >= 10.1
+jakarta.servlet.jsp.jstl
+<%@ taglib uri="jakarta.tags.core" %> 
+
+
+JSTL Functions:
+- Collection Length
+	- length
+
+String manipulation:
+- toUpperCasa, toLowerCase
+- substring, substringAfter, substringBefore
+- trim, replace, indexOf, startsWith, endsWith
+- contains, containsIgnoreCase, split, join, escapeXml

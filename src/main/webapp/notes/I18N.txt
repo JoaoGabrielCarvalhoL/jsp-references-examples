@@ -1,0 +1,53 @@
+What is I18N? 
+- The term Internationalization is frequently abbreviated as I18N 
+- There are 18 letters between the first "i" and the last "n"
+
+Formatting Messages 
+- Instead of hard-coding display text/messages in your application. 
+- Make use of labels / the placeholders
+- You need to create translated versions of each label
+- Based on user's language selection, system will include appropriate text
+
+- Locale = Language + Region
+Ex.: en_US = English (US) 
+	 en_GB = English (UK) 
+	 pt_BR = Portuguese (BR)
+	 
+	 
+	 
+JSTL Functions: 
+
+Setting Locale: 
+- setLocale
+- requestEncondig
+
+
+Messaging: 
+- bundle
+- message 
+- param 
+- setBundle
+
+
+Number and Date Formatting
+- formatNumber 
+- formatDate 
+- parseDate 
+- parseNumber 
+- setTimeZone
+- timeZone
+
+
+Steps:
+- Translated versions of your labels. 
+- Create JSP Page with labels. 
+- Update JSP page to change locale based on user selection.
+
+
+- File name must follow specific format
+<your project file name>_LANGUAGECODE_COUNTRYCODE.properties
+
+Ex.:
+mylabels_es_ES.properties
+mylabels_de_DE.properties
+mylabels_en_GB.properties
