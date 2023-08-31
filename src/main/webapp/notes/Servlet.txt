@@ -1,0 +1,40 @@
+What are Servlet? 
+
+- Java Class that is processed on the server. 
+- Java Class generates HTML that is returned to browser. 
+- Can read form data, use Cookies and Sessions and etc.
+- At a high-leval, similar functionality to JSP
+
+
+JSP							
+- HTML file with .jsp extension
+- Contains static HTML 
+- JSP to generate HTML
+- Has built-in JSP objects
+
+
+Servlets
+- Java Class file
+- Generate All HTML
+- More steps to access web objects
+
+
+Which One? 
+- Can use either one for building Java web apps
+- Build entire site using only servlet
+- Build entire site using only JSP
+
+
+Historical: 
+- Servlets released in 1997
+- JSP released in 1999
+
+Best Practice: 
+- Integrate them both together. 
+- Servlet does the business logic
+- JSP handles the presentation view
+
+
+Servlet Configuration Parameters: 
+- Your web app can make use of configuration parameters.
+- Located in standard file: WEB-INF/web.xml

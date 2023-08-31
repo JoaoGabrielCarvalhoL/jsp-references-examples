@@ -51,7 +51,12 @@ public class Student implements Serializable {
 	public void setIsVipCustomer(Boolean isVipCustomer) {
 		this.isVipCustomer = isVipCustomer;
 	}
-	
+
+	@Override
+	public String toString() {
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", isVipCustomer="
+				+ isVipCustomer + "]";
+	}
 	
 	
 }
