@@ -29,4 +29,14 @@
     <servlet-name>StudentServlet</servlet-name>
     <url-pattern>/StudentServlet</url-pattern>
   </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>DataServlet</display-name>
+    <servlet-name>DataServlet</servlet-name>
+    <servlet-class>br.com.carv.jsp.reference.servlet.DataServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>DataServlet</servlet-name>
+    <url-pattern>/DataServlet</url-pattern>
+  </servlet-mapping>
 </web-app>
